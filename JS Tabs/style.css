@@ -1,0 +1,79 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f0f0f0;
+     margin: auto;
+     padding: 20px;
+     text-align: center;
+ }
+
+ h1 {
+     color: #333;
+     margin-bottom: 10px;
+ }
+
+ .tabs {
+     display: flex;
+     margin-top: 20px;
+     background-color: #eee;
+     padding: 5px;
+ }
+
+ .tab {
+     border-radius: 5px 5px 0 0;
+     padding: 10px 20px;
+     cursor: pointer;
+     margin: auto;
+     transition-duration: 500ms;
+     transition-timing-function: ease-in-out;
+     border-bottom: transparent 2px solid;
+ }
+
+ .tabcontent {
+     display: none;
+     margin-top: 20px;
+     background-color: #fff;
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     animation: fadeinEffect 500ms;
+ }
+
+ .tabcontent.active {
+     display: block;
+ }
+
+ .tab:hover {
+     background-color: rgb(254, 230, 234);
+     border-bottom: #000 2px solid;
+     color: #000;
+     transition-duration: 200ms;
+     transition-timing-function: ease-in-out;
+ }
+
+ .tab.active {
+     background-color: pink;
+     color: #333;
+     border-bottom: #000 2px solid;
+ }
+
+ .tab.active:hover {
+     background-color: lightpink;
+     color: #333;
+     border-bottom: #000 2px solid;
+     transition-duration: 200ms;
+     transition-timing-function: ease-in-out;
+ }
+
+ img {
+     height: 500;
+ }
+
+ @keyframes fadeinEffect {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
