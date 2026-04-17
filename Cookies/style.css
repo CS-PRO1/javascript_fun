@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(222, 255, 255);
+    color: azure;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-image: url("imgs/wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px 5px 0 0;
+    /* margin: 20px 0 0; */
+    background-color: #0987b1a3;
+    padding: 5px;
+}
+
+.tab {
+    border-radius: 5px 5px 0 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto;
+    transition: background-color 200ms ease-in-out, border-bottom 200ms ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+    background-color: rgb(77, 240, 255);
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+.tab.active {
+    background-color: rgb(167, 217, 244);
+    color: #004471;
+    border-bottom: 2px solid aquamarine;
+}
+
+.tab.active:hover {
+    background-color: rgb(18, 229, 237);
+    color: #333;
+    border-bottom: 2px solid aqua;
+}
+
+/* Tab Content */
+.tabcontent {
+    display: none;
+    /* margin-top: 20px; */
+    background-color: rgba(47, 56, 56, 0.85);
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeinEffect 500ms;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* Images */
+img {
+    height: 400px;
+    border-radius: 10px;
+}
+
+.cookieImage {
+    height: 10%;
+    width: 40%;
+    border-radius: 5px;
+}
+
+/* Cookie Consent */
+.cookieConsent {
+    animation: fadeInUp 0.5s ease-in-out;
+    border-radius: 10px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.623);
+    color: #fff;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.cookieConsent.show {
+    display: flex;
+    opacity: 1;
+}
+
+.cookieConsent .contentRow {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 16px;
+}
+
+.cookieConsent.hidden {
+    animation: fadeOutDown 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Buttons */
+.acceptCookiesButton,
+.declineCookiesButton {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.acceptCookiesButton {
+    color: black;
+    border: 2px solid rgb(164, 250, 255);
+    background-color: rgb(100, 247, 255);
+}
+
+.acceptCookiesButton:hover {
+    background-color: rgb(164, 250, 255);
+}
+
+.declineCookiesButton {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.declineCookiesButton:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Animations */
+@keyframes fadeinEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
